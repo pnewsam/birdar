@@ -1,4 +1,4 @@
-export const data = [
+export const notableSightings = [
   {
     lng: -72.5459862,
     locName: "Meadow St. fields",
