@@ -1,0 +1,44 @@
+body {
+  background-image: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--black);
+  font-weight: 300;
+  --black: rgb(41, 41, 41);
+  --primary-color: #ff6600;
+  --secondary-color: hsl(51, 100%, 60%);
+  --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  --green: rgb(73, 226, 73);
+  --white: rgb(255, 255, 255);
+  --bg-gradient: linear-gradient(to top right, #6d9dc5, #73d2de);
+}
+
+body,
+select,
+button {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+h1 {
+  font-family: "Fira Sans";
+}
+
+select {
+  font-weight: 300;
+}
+
+label,
+th {
+  font-family: "Fira Sans";
+  color: var(--black)
+}
+
+button {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: none;
+  box-shadow: var(--card-shadow);
+  color: var(--black);
+  font-weight: 500;
+  padding: .25rem .5rem;
+  text-transform: uppercase;
+}
