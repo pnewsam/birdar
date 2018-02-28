@@ -1,20 +1,3 @@
 .App {
   padding: 40px;
 }
-
-body {
-  font-family: "Open Sans";
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-div {
-  box-sizing: border-box;
-}
-
-select {
-  appearance: none;
-}
