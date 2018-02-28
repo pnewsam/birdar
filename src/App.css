@@ -14,3 +14,7 @@ p {
 div {
   box-sizing: border-box;
 }
+
+select {
+  appearance: none;
+}

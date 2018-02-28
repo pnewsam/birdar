@@ -1,0 +1,10 @@
+.StateSelect {
+  font-size: 1rem;
+  padding: 0.25rem;
+  width: 100%;
+}
+
+.StateSelect__option {
+  font-size: 1rem;
+  width: 100%;
+}

@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../Button";
+import SearchForm from "../SearchForm";
 
 const Console = () => {
   return (
     <div className="Console">
-      <Button />
+      <SearchForm />
     </div>
   );
 };
