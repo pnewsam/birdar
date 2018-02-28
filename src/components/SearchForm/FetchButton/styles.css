@@ -2,6 +2,7 @@
   align-items: center;
   background-color: rgb(243, 221, 97);
   border: none;
+  box-shadow: none;
   display: flex;
   font-size: 1rem;
   justify-content: center;

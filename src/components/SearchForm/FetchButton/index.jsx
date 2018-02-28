@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { requestNotableSightings } from "../../redux";
+import { requestNotableSightings } from "../../../redux";
+import store from "../../../redux";
 import "./styles.css";
-import store from "../../redux";
 
 export class Button extends Component {
   constructor(props) {
@@ -9,6 +9,7 @@ export class Button extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(e) {
+    e.preventDefault();
     store.dispatch(requestNotableSightings);
   }
   render() {
