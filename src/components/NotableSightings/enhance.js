@@ -1,9 +1,7 @@
 import { connect } from "react-redux";
 
-const mapStateToProps = state => {
-  return {
-    notableSightings: state.notableSightings
-  };
-};
+const mapStateToProps = state => ({
+  notableSightings: state.notableSightings
+});
 
 export default connect(mapStateToProps);

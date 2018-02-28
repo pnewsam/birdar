@@ -1,6 +1,6 @@
 import React from "react";
 import enhance from "./enhance";
-import styles from "./styles.css";
+import "./styles.css";
 import NotableSighting from "../NotableSighting";
 
 const NotableSightings = ({ notableSightings }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.css";
+import "./styles.css";
 import Console from "./Console";
 import NotableSightings from "../NotableSightings";
 

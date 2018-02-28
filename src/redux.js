@@ -11,12 +11,10 @@ export const requestNotableSightings = {
   type: REQUEST_NOTABLE_SIGHTINGS
 };
 
-export const receiveNotableSightings = payload => {
-  return {
-    type: RECEIVE_NOTABLE_SIGHTINGS,
-    payload
-  };
-};
+export const receiveNotableSightings = payload => ({
+  type: RECEIVE_NOTABLE_SIGHTINGS,
+  payload
+});
 
 // Reducer
 

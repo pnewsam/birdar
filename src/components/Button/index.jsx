@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { requestNotableSightings } from "../../redux";
-import styles from "./styles.css";
+import "./styles.css";
 import store from "../../redux";
 
 export class Button extends Component {
