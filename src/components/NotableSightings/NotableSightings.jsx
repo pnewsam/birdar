@@ -1,6 +1,5 @@
 import React from "react";
-// import enhance from "./enhance";
-import enhance from "./enhanceWithSampleData";
+import enhance from "./enhance";
 import NotableSighting from "../NotableSighting/NotableSighting";
 
 const NotableSightings = ({ notableSightings }) => {

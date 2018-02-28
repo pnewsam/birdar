@@ -1,18 +1,9 @@
-import { lifecycle } from "recompose";
+import { connect } from "react-redux";
 
-function componentDidMount() {
-  fetch(
-    "http://ebird.org/ws1.1/data/notable/region/recent?rtype=subnational1&r=US-MA&fmt=json&maxResults=20"
-  )
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      this.setState({
-        notableSightings: data
-      });
-    });
-}
+const mapStateToProps = state => {
+  return {
+    notableSightings: state.notableSightings
+  };
+};
 
-export default lifecycle({ componentDidMount });
+export default connect(mapStateToProps);
