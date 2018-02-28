@@ -1,10 +1,11 @@
 import React from "react";
 import enhance from "./enhance";
-import NotableSighting from "../NotableSighting/NotableSighting";
+import styles from "./styles.css";
+import NotableSighting from "../NotableSighting";
 
 const NotableSightings = ({ notableSightings }) => {
   return (
-    <div>
+    <div className="NotableSightings">
       {notableSightings &&
         notableSightings.map((notableSighting, index) => (
           <NotableSighting

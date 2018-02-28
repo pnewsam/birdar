@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { requestNotableSightings } from "../../redux";
+import styles from "./styles.css";
 import store from "../../redux";
 
 export class Button extends Component {
@@ -11,7 +12,11 @@ export class Button extends Component {
     store.dispatch(requestNotableSightings);
   }
   render() {
-    return <button onClick={this.handleClick}>Fetch Notable Sightings</button>;
+    return (
+      <button className="Button" onClick={this.handleClick}>
+        Fetch Notable Sightings
+      </button>
+    );
   }
 }
 
