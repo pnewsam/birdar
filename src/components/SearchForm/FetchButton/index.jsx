@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./styles.css";
 
-const Button = ({ requestNotableSightings }) => {
+const Button = ({ requestNotableSightings, selectedState }) => {
   return (
     <button
       className="Button"
       onClick={e => {
         e.preventDefault();
-        requestNotableSightings();
+        requestNotableSightings(selectedState);
       }}
     >
       Fetch Notable Sightings

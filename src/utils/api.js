@@ -2,11 +2,12 @@ import store from "../stores/configureStore";
 import { receiveNotableSightings } from "../reducers";
 
 const BASE_URL =
-  "http://ebird.org/ws1.1/data/notable/region/recent?rtype=subnational1&fmt=json&maxResults=20&r=US-MA";
+  "http://ebird.org/ws1.1/data/notable/region/recent?rtype=subnational1&fmt=json&maxResults=20&r=US-";
 
 export default class Api {
-  static async get() {
-    await fetch(BASE_URL)
+  static async get(state) {
+    const action = BASE_URL + state;
+    await fetch(action)
       .then(response => {
         return response.json();
       })

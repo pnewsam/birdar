@@ -4,11 +4,18 @@ import StateSelect from "./StateSelect";
 import FetchButton from "./FetchButton";
 import enhance from "./enhance";
 
-const SearchForm = ({ requestNotableSightings, setSelectedState }) => {
+const SearchForm = ({
+  requestNotableSightings,
+  selectedState,
+  setSelectedState
+}) => {
   return (
     <form className="SearchForm">
       <StateSelect setSelectedState={setSelectedState} />
-      <FetchButton requestNotableSightings={requestNotableSightings} />
+      <FetchButton
+        requestNotableSightings={requestNotableSightings}
+        selectedState={selectedState}
+      />
     </form>
   );
 };

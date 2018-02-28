@@ -6,9 +6,10 @@ const initialState = {
   selectedState: "AL"
 };
 
-export const requestNotableSightings = {
-  type: types.REQUEST_NOTABLE_SIGHTINGS
-};
+export const requestNotableSightings = payload => ({
+  type: types.REQUEST_NOTABLE_SIGHTINGS,
+  payload
+});
 
 export const receiveNotableSightings = payload => ({
   type: types.RECEIVE_NOTABLE_SIGHTINGS,
@@ -23,7 +24,7 @@ export const setSelectedState = payload => ({
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.REQUEST_NOTABLE_SIGHTINGS:
-      Api.get();
+      Api.get(payload);
       return state;
     case types.RECEIVE_NOTABLE_SIGHTINGS:
       return { ...state, notableSightings: payload };
