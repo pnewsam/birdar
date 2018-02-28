@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import CountySelect from "./CountySelect";
 import StateSelect from "./StateSelect";
 import FetchButton from "./FetchButton";
 import enhance from "./enhance";
@@ -12,6 +13,7 @@ const SearchForm = ({
   return (
     <form className="SearchForm">
       <StateSelect setSelectedState={setSelectedState} />
+      <CountySelect />
       <FetchButton
         requestNotableSightings={requestNotableSightings}
         selectedState={selectedState}
