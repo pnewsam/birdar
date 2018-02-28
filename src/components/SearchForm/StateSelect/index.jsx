@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import store from "../../../stores/configureStore";
+import { setSelectedState } from "../../../reducers";
 import { US_STATES } from "./usStates";
 import downArrow from "./down-arrow.svg";
 import "./styles.css";
@@ -12,8 +14,7 @@ export class StateInput extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    console.log(e.target.value);
-    console.log(e.target.getAttribute("regionState"));
+    store.dispatch(setSelectedState(e.target.value));
   }
   render() {
     return (

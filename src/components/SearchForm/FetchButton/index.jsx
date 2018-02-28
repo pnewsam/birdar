@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { requestNotableSightings } from "../../../redux";
-import store from "../../../redux";
+import { requestNotableSightings } from "../../../reducers";
+import store from "../../../stores/configureStore";
 import "./styles.css";
 
 export class Button extends Component {
