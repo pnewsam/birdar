@@ -2,14 +2,15 @@ import React from "react";
 import "./styles.css";
 import StateSelect from "./StateSelect";
 import FetchButton from "./FetchButton";
+import enhance from "./enhance";
 
-const SearchForm = () => {
+const SearchForm = ({ requestNotableSightings, setSelectedState }) => {
   return (
     <form className="SearchForm">
-      <StateSelect />
-      <FetchButton />
+      <StateSelect setSelectedState={setSelectedState} />
+      <FetchButton requestNotableSightings={requestNotableSightings} />
     </form>
   );
 };
 
-export default SearchForm;
+export default enhance(SearchForm);
