@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { US_STATES } from "./usStates";
 import downArrow from "./down-arrow.svg";
 import "./styles.css";
