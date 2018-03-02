@@ -1,4 +1,4 @@
-const US_COUNTIES_BY_STATE = {
+export const US_COUNTIES_BY_STATE = {
   MA: [
     {
       subnational2Code: "US-MA-001",

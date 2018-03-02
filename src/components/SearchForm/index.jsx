@@ -13,7 +13,7 @@ const SearchForm = ({
   return (
     <form className="SearchForm">
       <StateSelect setSelectedState={setSelectedState} />
-      <CountySelect />
+      <CountySelect selectedState={selectedState} />
       <FetchButton
         requestNotableSightings={requestNotableSightings}
         selectedState={selectedState}
