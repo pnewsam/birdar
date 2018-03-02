@@ -1,4 +1,4 @@
-import { US_COUNTIES_BY_STATE } from "./usCountiesByState";
+import { US_COUNTIES_BY_STATE } from "../../../constants/usCountiesByState";
 import { compose, mapProps } from "recompose";
 
 export default compose(
