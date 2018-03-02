@@ -1,5 +1,5 @@
 import React from "react";
-import { US_STATES } from "./usStates";
+import { US_STATES } from "../../../constants/usStates";
 import downArrow from "./down-arrow.svg";
 import "./styles.css";
 
