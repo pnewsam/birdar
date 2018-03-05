@@ -1,6 +1,6 @@
 import React from "react";
 import { US_STATES } from "../../../constants/usStates";
-import downArrow from "./down-arrow.svg";
+import downArrow from "../down-arrow.svg";
 import "./styles.css";
 
 const StateInput = ({ setSelectedState }) => {
