@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { requestNotableSightings, setSelectedState } from "../../reducers";
+import { requestNotableSightings, setSelectedState } from "../../../reducers";
 
 const mapStateToProps = state => ({
   selectedState: state.selectedState

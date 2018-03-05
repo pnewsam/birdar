@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles.css";
-import CountySelect from "./CountySelect";
-import StateSelect from "./StateSelect";
-import FetchButton from "./FetchButton";
+import CountySelect from "../CountySelect";
+import StateSelect from "../StateSelect";
+import FetchButton from "../FetchButton";
 import enhance from "./enhance";
+import "./styles.css";
 
 const SearchForm = ({
   requestNotableSightings,
