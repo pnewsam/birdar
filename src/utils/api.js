@@ -1,8 +1,8 @@
-import store from "../stores/configureStore";
-import { receiveNotableSightings } from "../reducers";
+import store from '../stores/configureStore';
+import { fetchNotableSightingsSuccess } from '../reducers';
 
 const BASE_URL =
-  "http://ebird.org/ws1.1/data/notable/region/recent?rtype=subnational1&fmt=json&maxResults=20&r=US-";
+  'http://ebird.org/ws1.1/data/notable/region/recent?rtype=subnational1&fmt=json&maxResults=20&r=US-';
 
 export default class Api {
   static async get(state) {
@@ -12,7 +12,7 @@ export default class Api {
         return response.json();
       })
       .then(data => {
-        store.dispatch(receiveNotableSightings(data));
+        store.dispatch(fetchNotableSightingsSuccess(data));
       });
   }
 }

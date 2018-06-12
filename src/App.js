@@ -1,19 +1,14 @@
-import React, { Component } from "react";
-import { Provider } from "react-redux";
-import store from "./stores/configureStore";
-import Sidebar from "./components/Layout/Sidebar";
-import "./App.css";
+import React, { Fragment } from 'react';
+import { Provider } from 'react-redux';
+import store from './stores/configureStore';
+import Root from './components/Root';
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <div className="App">
-          <Sidebar />
-        </div>
-      </Provider>
-    );
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <Fragment>
+      <Root />
+    </Fragment>
+  </Provider>
+);
 
 export default App;
