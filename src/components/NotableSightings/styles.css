@@ -1,0 +1,12 @@
+.NotableSightings {
+  padding: 2rem;
+}
+
+.NotableSightings__table {
+  text-align: left;
+}
+
+.NotableSightings th,
+.NotableSightings td {
+  padding: .25rem;
+}

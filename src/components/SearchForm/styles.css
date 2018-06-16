@@ -1,0 +1,11 @@
+.SearchForm {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.SearchForm__form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}

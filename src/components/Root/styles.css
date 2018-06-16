@@ -1,0 +1,14 @@
+main {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 200px 1fr;
+}
+
+main>* {
+  border: solid 1px black;
+}
+
+header {
+  grid-column: span 2;
+  text-align: center;
+}
