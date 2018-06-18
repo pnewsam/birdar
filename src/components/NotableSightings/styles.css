@@ -1,13 +1,38 @@
 .NotableSightings {
-  padding: 2rem;
   grid-column: span 2;
 }
 
-.NotableSightings__table {
+.NotableSightings {
   text-align: left;
+}
+
+.NotableSightings tr {
+  height: 2rem;
+  color: var(--white);
 }
 
 .NotableSightings th,
 .NotableSightings td {
   padding: .25rem;
+}
+
+.NotableSightings__rarityCode-column {
+  width: 5%;
+  font-weight: bolder;
+}
+
+.NotableSightings__howMany-column {
+  width: 5%;
+}
+
+.NotableSightings__comNAme-column {
+  width: 30%;
+}
+
+.NotableSightings__locName-column {
+  width: 45%
+}
+
+.NotableSightings__obsDt-column {
+  width: 15%
 }

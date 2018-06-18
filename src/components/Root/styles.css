@@ -1,19 +1,19 @@
 main {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--card-shadow);
   margin: 2rem 3rem;
+  padding: 2rem;
 }
 
 .Root__div {
   align-items: flex-end;
   display: flex;
-}
-
-header {
-  color: #ff6600;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }
 
 .Root__h1 {
+  color: var(--primary-color);
   font-size: 4rem;
 }

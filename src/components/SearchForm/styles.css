@@ -1,17 +1,31 @@
 .SearchForm {
+  background-color: whitesmoke;
+  border: solid 1px lightgrey;
   height: 100%;
+  padding: 1.5rem;
+}
+
+.SearchForm__form {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .SearchForm__form label,
 .SearchForm__form select {
   margin-right: .5rem;
+  display: inline-block;
+}
+
+.SearchForm__form select,
+.SearchForm__form button {
+  font-size: 1rem;
+}
+
+.SearchForm__selects {
+  margin-bottom: 1rem;
 }
 
 .SearchForm__form select {
   border: none;
-  font-size: 1rem;
 }

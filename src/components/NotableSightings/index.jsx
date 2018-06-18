@@ -1,26 +1,32 @@
 import React from 'react';
 import './styles.css';
 
-const NotableSightings = ({ findRarityCode, notableSightings }) => (
+const NotableSightings = ({
+  findRarityCode,
+  notableSightings,
+  styleRarityCode,
+}) => (
   <section className="NotableSightings">
     <table className="NotableSightings__table">
       <thead>
         <tr>
-          <th>Rarity</th>
-          <th>#</th>
-          <th>Common Name</th>
-          <th>Location</th>
-          <th>Observation Date</th>
+          <th className="NotableSightings__rarityCode-column">Rarity</th>
+          <th className="NotableSightings__howMany-column">#</th>
+          <th className="NotableSightings__comNAme-column">Common Name</th>
+          <th className="NotableSightings__locName-column">Location</th>
+          <th className="NotableSightings__obsDt-column">Observation Date</th>
         </tr>
       </thead>
       <tbody>
         {notableSightings.map(({ comName, howMany, locName, obsDt }, index) => (
-          <tr key={index}>
-            <td>{findRarityCode(comName)}</td>
-            <td>{howMany}</td>
-            <td>{comName}</td>
-            <td>{locName}</td>
-            <td>{obsDt}</td>
+          <tr key={index} style={styleRarityCode(findRarityCode(comName))}>
+            <td className="NotableSightings__rarityCode-column">
+              {findRarityCode(comName)}
+            </td>
+            <td className="NotableSightings__howMany-column">{howMany}</td>
+            <td className="NotableSightings__comName-column">{comName}</td>
+            <td className="NotableSightings__locName-column">{locName}</td>
+            <td className="NotableSightings__obsDt-column">{obsDt}</td>
           </tr>
         ))}
       </tbody>
