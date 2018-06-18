@@ -1,14 +1,19 @@
 main {
-  display: grid;
-  grid-template-rows: 100px 1fr;
-  grid-template-columns: 200px 1fr;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 2rem 3rem;
 }
 
-main>* {
-  border: solid 1px black;
+.Root__div {
+  align-items: flex-end;
+  display: flex;
 }
 
 header {
-  grid-column: span 2;
-  text-align: center;
+  color: #ff6600;
+}
+
+.Root__h1 {
+  font-size: 4rem;
 }

@@ -1,5 +1,6 @@
 .NotableSightings {
   padding: 2rem;
+  grid-column: span 2;
 }
 
 .NotableSightings__table {

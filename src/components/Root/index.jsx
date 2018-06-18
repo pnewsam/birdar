@@ -5,10 +5,12 @@ import './styles.css';
 
 const Root = () => (
   <main>
-    <header>
-      <h1>BIRDAR</h1>
-    </header>
-    <SearchFormContainer />
+    <div className="Root__div">
+      <header>
+        <h1 className="Root__h1">birdar</h1>
+      </header>
+      <SearchFormContainer />
+    </div>
     <NotableSightingsContainer />
   </main>
 );

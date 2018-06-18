@@ -1,11 +1,17 @@
 .SearchForm {
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   padding: 2rem;
 }
 
+.SearchForm__form label,
 .SearchForm__form select {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
+  margin-right: .5rem;
+}
+
+.SearchForm__form select {
+  border: none;
+  font-size: 1rem;
 }
