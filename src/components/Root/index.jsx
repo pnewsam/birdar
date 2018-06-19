@@ -10,7 +10,7 @@ const text = {
   link: "Cornell Lab of Ornithology's eBird",
 };
 
-const Root = () => (
+export const Root = () => (
   <main>
     <div className="Root__div">
       <header>

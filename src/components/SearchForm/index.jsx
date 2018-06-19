@@ -6,7 +6,11 @@ const text = {
   button: 'Fetch Notable Sightings',
 };
 
-const SearchForm = ({ handleChange, handleSubmit, selectableCounties }) => (
+export const SearchForm = ({
+  handleChange,
+  handleSubmit,
+  selectableCounties,
+}) => (
   <section className="SearchForm">
     <form className="SearchForm__form" onSubmit={handleSubmit}>
       <div className="SearchForm__selects">

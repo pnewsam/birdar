@@ -1,7 +1,7 @@
 import Api from '../utils/api';
 import { types, US_COUNTIES_BY_STATE } from '../constants';
 
-const initialState = {
+export const initialState = {
   notableSightings: [],
   selectableCounties: US_COUNTIES_BY_STATE['AL'],
   selectedState: 'AL',
@@ -22,7 +22,7 @@ export const setSelectedState = payload => ({
   payload,
 });
 
-const reducer = (state = initialState, { type, payload }) => {
+export const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.FETCH_NOTABLE_SIGHTINGS:
       Api.get(payload);
@@ -40,4 +40,4 @@ const reducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default reducer;
+export default rootReducer;
