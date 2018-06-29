@@ -1,6 +1,7 @@
 import React from 'react';
 import { US_STATES } from '../../constants';
-import './styles.css';
+import { Button, Div, Form, Label, Section, Select } from './styled';
+import enhance from './enhance';
 
 const text = {
   button: 'Fetch Notable Sightings',
@@ -11,29 +12,29 @@ export const SearchForm = ({
   handleSubmit,
   selectableCounties,
 }) => (
-  <section className="SearchForm">
-    <form className="SearchForm__form" onSubmit={handleSubmit}>
-      <div className="SearchForm__selects">
-        <label htmlFor="state">State</label>
-        <select name="state" onChange={handleChange}>
+  <Section>
+    <Form onSubmit={handleSubmit}>
+      <Div>
+        <Label htmlFor="state">State</Label>
+        <Select name="state" onChange={handleChange}>
           {Object.entries(US_STATES).map(([abbreviation, fullName], index) => (
             <option key={index} value={abbreviation}>
               {fullName}
             </option>
           ))}
-        </select>
-        <label htmlFor="county">County</label>
-        <select name="county">
+        </Select>
+        <Label htmlFor="county">County</Label>
+        <Select name="county">
           {selectableCounties.map(({ name, subnational2Code }, index) => (
             <option key={index} value={subnational2Code}>
               {name}
             </option>
           ))}
-        </select>
-      </div>
-      <button>{text.button}</button>
-    </form>
-  </section>
+        </Select>
+      </Div>
+      <Button>{text.button}</Button>
+    </Form>
+  </Section>
 );
 
-export default SearchForm;
+export default enhance(SearchForm);

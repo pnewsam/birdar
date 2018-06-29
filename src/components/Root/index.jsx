@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchFormContainer from '../SearchFormContainer';
-import NotableSightingsContainer from '../NotableSightingsContainer';
-import './styles.css';
+import SearchForm from '../SearchForm';
+import NotableSightings from '../NotableSightings';
+import { Div, H1, Main } from './styled';
 
 const text = {
   title: 'birdar',
@@ -11,20 +11,20 @@ const text = {
 };
 
 export const Root = () => (
-  <main>
-    <div className="Root__div">
+  <Main>
+    <Div>
       <header>
-        <h1 className="Root__h1">{text.title}</h1>
+        <H1>{text.title}</H1>
         <p>{text.subtitle}</p>
         <p>
           {text.credit}&nbsp;
           <a href="https://ebird.org">{text.link}</a>.
         </p>
       </header>
-      <SearchFormContainer />
-    </div>
-    <NotableSightingsContainer />
-  </main>
+      <SearchForm />
+    </Div>
+    <NotableSightings />
+  </Main>
 );
 
 export default Root;
