@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchForm from '../SearchForm';
 import NotableSightings from '../NotableSightings';
+import Geolocator from '../Geolocator';
 import { Div, H1, Main } from './styled';
 
 const text = {
@@ -21,9 +21,9 @@ export const Root = () => (
           <a href="https://ebird.org">{text.link}</a>.
         </p>
       </header>
-      <SearchForm />
     </Div>
     <NotableSightings />
+    <Geolocator />
   </Main>
 );
 

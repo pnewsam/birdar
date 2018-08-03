@@ -1,33 +1,26 @@
 import { connect } from 'react-redux';
-import { fetchNotableSightings, setSelectedState } from '../../reducers';
+import { fetchRecentNearbyNotableSightings } from '../../sagas';
 import { compose, withHandlers } from 'recompose';
 
-const mapStateToProps = ({ selectableCounties, selectedState }) => ({
-  selectableCounties,
-  selectedState,
-});
+// const mapStateToProps = ({ selectableCounties }) => ({
+//   selectableCounties,
+// });
 
 const mapDispatchToProps = {
-  fetchNotableSightings,
-  setSelectedState,
-};
-
-export const handleChange = ({ setSelectedState }) => ({ target }) => {
-  setSelectedState(target.value);
+  fetchRecentNearbyNotableSightings,
 };
 
 export const handleSubmit = ({
-  fetchNotableSightings,
-  selectedState,
+  fetchRecentNearbyNotableSightings,
 }) => event => {
   event.preventDefault();
-  fetchNotableSightings(selectedState);
+  fetchRecentNearbyNotableSightings();
 };
 
 export default compose(
   connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps,
   ),
-  withHandlers({ handleChange, handleSubmit }),
+  withHandlers({ handleSubmit }),
 );
