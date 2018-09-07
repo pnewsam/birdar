@@ -1,35 +1,16 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  font-size: 14px;
   grid-column: span 2;
+  padding: 12px;
   text-align: left;
+  user-select: none;
 `;
 
-export const Table = styled.table`
-  width: 100%;
-`;
-
-export const Th = styled.th`
-  padding: 0.25rem;
-`;
-
-export const ThRarityAndHowMany = Th.extend`
-  text-align: center;
-  width: 5%;
-`;
-export const ThComName = Th.extend`
-  width: 30%;
-`;
-
-export const ThLocName = Th.extend`
-  width: 45%;
-`;
-
-export const ThObsDt = Th.extend`
-  width: 15%;
-`;
-
-export const Tr = styled.tr`
-  height: 2rem;
-  color: var(--white);
+export const Tbody = styled.tbody`
+  vertical-align: top;
 `;

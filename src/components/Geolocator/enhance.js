@@ -1,10 +1,10 @@
-import { compose, lifecycle, withHandlers } from 'recompose';
+import { compose, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
 import { fetchRecentNearbyNotableSightings, logPosition } from '../../reducers';
 import { extractLatAndLong } from '../../utils';
 
-const mapStateToProps = state => ({
-  position: state.position,
+const mapStateToProps = ({ geolocation }) => ({
+  position: geolocation.position,
 });
 
 const mapDispatchToProps = {
@@ -35,19 +35,10 @@ export function componentDidUpdate(prevProps) {
   }
 }
 
-const handleClick = ({ fetchRecentNearbyNotableSightings }) => () => {
-  const payload = {
-    long: -76.51,
-    lat: 42.46,
-  };
-  fetchRecentNearbyNotableSightings(payload);
-};
-
 export default compose(
   connect(
     mapStateToProps,
     mapDispatchToProps,
   ),
   lifecycle({ componentDidMount, componentDidUpdate }),
-  withHandlers({ handleClick }),
 );

@@ -1,34 +1,19 @@
 import React from 'react';
 import NotableSighting from '../NotableSighting';
 import enhance from './enhance';
-import { Section, Table, Th, Tr } from './styled';
+import { Section, Tbody } from './styled';
+import LoadingSpinner from '../LoadingSpinner';
 
-const text = {
-  comNAme: 'Common Name',
-  howMany: '#',
-  locName: 'Location',
-  obsDt: 'Observation Date',
-  rarity: 'ABA Rarity',
-};
-
-const NotableSightings = ({ notableSightings }) => (
+const NotableSightings = ({ isFetching, notableSightings }) => (
   <Section>
-    <Table>
-      <thead>
-        <Tr>
-          <Th className="rarity">{text.rarity}</Th>
-          <Th className="howMany">{text.howMany}</Th>
-          <Th className="comName">{text.comName}</Th>
-          <Th className="locName">{text.locName}</Th>
-          <Th className="obsDt">{text.obsDt}</Th>
-        </Tr>
-      </thead>
-      <tbody>
+    {isFetching && <LoadingSpinner />}
+    <table>
+      <Tbody>
         {notableSightings.map((data, index) => (
           <NotableSighting key={index} {...data} />
         ))}
-      </tbody>
-    </Table>
+      </Tbody>
+    </table>
   </Section>
 );
 

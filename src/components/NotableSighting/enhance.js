@@ -1,4 +1,4 @@
-import { compose, setPropTypes } from 'recompose';
+import { compose, setPropTypes, withStateHandlers } from 'recompose';
 import { addProps } from '../../utils/recompose/addProps';
 import PropTypes from 'prop-types';
 import { RARITY_CODES } from '../../constants';
@@ -8,6 +8,7 @@ const propTypes = {
   howMany: PropTypes.number.isRequired,
   locName: PropTypes.string.isRequired,
   obsDt: PropTypes.string.isRequired,
+  sciName: PropTypes.string.isRequired,
 };
 
 const rarityCode = ({ comName }) => {
@@ -27,7 +28,11 @@ const rarityCodeColor = ({ rarityCode }) => {
 };
 
 const styleRoot = ({ rarityCodeColor }) => ({
-  backgroundColor: `var(--${rarityCodeColor})`,
+  color: `var(--${rarityCodeColor})`,
+});
+
+const handleClick = ({ isOpen }) => () => ({
+  isOpen: !isOpen,
 });
 
 export default compose(
@@ -35,4 +40,5 @@ export default compose(
   addProps({ rarityCode }),
   addProps({ rarityCodeColor }),
   addProps({ styleRoot }),
+  withStateHandlers({ isOpen: false }, { handleClick }),
 );

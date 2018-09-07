@@ -5,6 +5,7 @@ p {
   padding: 0;
 }
 
-div {
+div,
+p {
   box-sizing: border-box;
 }

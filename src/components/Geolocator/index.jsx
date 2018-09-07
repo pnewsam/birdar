@@ -1,8 +1,7 @@
 import React from 'react';
 import enhance from './enhance';
+import { Span } from './styled';
 
-const Geolocator = ({ handleClick }) => (
-  <button onClick={handleClick}>Fetch Stuff</button>
-);
+const Geolocator = () => <Span>Geolocator</Span>;
 
 export default enhance(Geolocator);
